@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/cea8372f53.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <script type="text/javascript" src="src/index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="header">What is the weather now?</h1>
+      <form id="searchForm">
+				<div class ="row">
+         <div class="col-6">
+					<input
+					 class="search"
+						id = "search" 
+						type="text" 
+						placeholder="🔍 Search for city" />
+				</div>
+				<div class="col-3">
+				<input 
+				type="submit" 
+				class="btn btn-warning" 
+				value="Search" />
+				</div>
+				<div class="col-3">
+						<button
+							class="btn btn-success w-100"
+							id="current"
+						>
+							📍Locate
+						</button>
+					</div>
+				</div>
+      </form>
+      <div class="row">
+        <h1 id="city" class="col-5 city"></h1>
+        <div class="calendar">
+          <h4 id="date">
+            <h4 class="day">🗓</h4>
+          </h4>
+        </div>
+      </div>
+      <li id="description" class="weather">
+			</li>
+
+        <h2 class="temp" class="col-6">
+          <i class="fas fa-sun icon-large"></i>
+          <div id="temp"> <br /></div>
+          <a href="#" class="degrees" id="celsius">°C</a>|<a
+            href="#"
+            class="degrees"
+            id="fahrenheit"
+            >°F</a
+          >
+        </h2>
+      </li>
+      <ul>
+      <li class="weather">
+				Humidity: 
+				<span id="humidity"></span>
+				 %
+			</li>
+      <li  class="weather">
+				Wind: 
+				<span id="wind"></span> 
+				km/h
+			</li>
+			</ul>
+			<div class="otherDays">
+        <div class="row">
+          <p class="col week">
+            Tue.<br />
+            <i class="fas fa-cloud-rain"></i> 15°C
+          </p>
+          <p class="col week">
+            Wed.<br />
+            <i class="fas fa-cloud-rain"></i> 15°C
+          </p>
+          <p class="col week">
+            Thu.<br />
+            <i class="fas fa-cloud-rain"></i> 15°C
+          </p>
+          <p class="col week">
+            Fri.<br />
+            <i class="fas fa-cloud-rain"></i> 15°C
+          </p>
+          <p class="col week">
+            Sat.<br />
+            <i class="fas fa-cloud-rain"></i> 15°C
+          </p>
+          <p class="col week">
+            Sun.<br />
+            <i class="fas fa-cloud-rain"></i> 15°C
+          </p>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>

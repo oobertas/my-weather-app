@@ -1,0 +1,94 @@
+.container {
+  display: block;
+  width: 600px;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 5px 1px 100px 5px #d3d3d3;
+}
+
+.header {
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  color: aliceblue;
+  padding: 15px;
+  font-size: 25px;
+}
+
+.search {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.city {
+  color: aliceblue;
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Lobster", cursive;
+  font-size: 50px;
+  border-radius: 20px;
+}
+
+.calendar {
+  color: aliceblue;
+}
+
+#date {
+  color: aliceblue;
+  text-align: right;
+  margin-top: 20px;
+  font-family: "Lobster", cursive;
+  font-size: 20px;
+  border-radius: 20px;
+}
+
+.weather {
+  color: aliceblue;
+  text-align: right;
+
+  font-family: "Lobster", cursive;
+  font-size: 20px;
+  border-radius: 20px;
+}
+.day {
+  display: inline;
+  text-align: right;
+  font-family: "Lobster", cursive;
+  padding-right: 0;
+  font-size: 20px;
+}
+
+.temp {
+  text-align: center;
+  font-family: "Lobster", cursive;
+}
+
+.degrees {
+  font-size: 20px;
+  color: black;
+}
+
+#celsius {
+  color: blue;
+}
+.fa-sun {
+  color: yellow;
+}
+
+.otherDays {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.week {
+  text-align: center;
+  font-family: "Lobster", cursive;
+  color: black;
+  padding: 20px;
+  border-radius: 1000px;
+  box-shadow: 5px 1px 10px 5px #d3d3d3;
+  background-image: url("https://images.unsplash.com/photo-1433863448220-78aaa064ff47?ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80");
+}
+
+.fa-cloud-rain {
+  color: cadetblue;
+}
