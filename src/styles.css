@@ -1,6 +1,6 @@
 .container {
   display: block;
-  width: 600px;
+  max-width: 600px;
   border-radius: 20px;
   margin-top: 20px;
   box-shadow: 5px 1px 100px 5px #d3d3d3;
