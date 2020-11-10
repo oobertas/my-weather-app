@@ -1,9 +1,13 @@
 .container {
-  display: block;
-  max-width: 600px;
   border-radius: 20px;
-  margin-top: 20px;
+  
   box-shadow: 5px 1px 100px 5px #d3d3d3;
+}
+
+.box {
+  max-width: 615px;
+  margin: 20px auto;
+  padding: 30px;
 }
 
 .header {
@@ -61,6 +65,10 @@
 .temp {
   text-align: center;
   font-family: "Lobster", cursive;
+}
+
+li{
+  list-style: none;
 }
 
 .degrees {

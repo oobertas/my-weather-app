@@ -1,5 +1,4 @@
 
-//let axios = require("axios").default;
 let n = new Date();
 let y = n.getFullYear();
 let m = n.getMonth() + 1;
@@ -37,7 +36,7 @@ document.querySelector(".day").innerHTML = `${days[wd]} ${currentTime}`;
 if (document.body) {
   if (7 <= currentTime && currentTime < 20) {
     document.body.background =
-      "media/day.jpg";
+      "https://images.unsplash.com/photo-1570378114504-ce4aedae3ddd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80";
   } else {
     document.body.background =
       "https://images.unsplash.com/photo-1515166162498-25562df50839?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80";
