@@ -29,8 +29,8 @@ let days = [
   "Saturday",
 ];
 document.getElementById("date").innerHTML = `🗓 ${months[m]} ${d}, ${y} `;
-document.querySelector(".day").innerHTML = `${days[wd]} ${currentTime}`;
-
+document.querySelector(".day").innerHTML = `${days[wd]}`;
+document.getElementById("time").innerHTML = ` ${currentTime}`;
 //background changes according to the time of the day
 
 if (document.body) {

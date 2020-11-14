@@ -30,7 +30,7 @@
   color: aliceblue;
   text-align: center;
   margin-top: 20px;
-  font-family: "Lobster", cursive;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 50px;
   border-radius: 20px;
 }
@@ -44,23 +44,36 @@
   text-align: right;
   margin-top: 20px;
   margin-left: 0;
-  font-family: "Lobster", cursive;
-  font-size: 20px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 15px;
   border-radius: 20px;
+}
+
+#time{
+  color: yellow;
 }
 
 .weather {
   color: aliceblue;
   text-align: right;
-
-  font-family: "Lobster", cursive;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 20px;
   border-radius: 20px;
 }
+.date{
+  color: aliceblue;
+  text-align: right;
+  margin-top: 20px;
+  margin-left: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 15px;
+  border-radius: 20px;
+}
 .day {
+  color: aliceblue;
   display: inline;
   text-align: right;
-  font-family: "Lobster", cursive;
+  font-family: "Josefin Sans", sans-serif;
   padding-right: 0;
   font-size: 20px;
 }
@@ -75,7 +88,7 @@
   margin-bottom: 5px;
   margin-top: 35px;
   text-align: right;
-  font-family: "Lobster", cursive;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 li{
@@ -114,12 +127,11 @@ li{
 
 .week {
   text-align: center;
-  font-family: "Lobster", cursive;
+  font-family: "Josefin Sans", sans-serif;
   color: black;
   padding: 20px;
-  border-radius: 1000px;
+  border-radius: 15px;
   box-shadow: 5px 1px 10px 5px #d3d3d3;
-  
 }
 .column-left{ float: left; width: 33.333%; }
 .column-right{ float: right; width: 33.333%; }
