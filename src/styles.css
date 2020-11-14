@@ -119,8 +119,11 @@ li{
   padding: 20px;
   border-radius: 1000px;
   box-shadow: 5px 1px 10px 5px #d3d3d3;
-  background-image: url("https://images.unsplash.com/photo-1433863448220-78aaa064ff47?ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80");
+  
 }
+.column-left{ float: left; width: 33.333%; }
+.column-right{ float: right; width: 33.333%; }
+.column-center{ display: inline-block; width: 33.333%; }
 
 .fa-cloud-rain {
   color: cadetblue;
