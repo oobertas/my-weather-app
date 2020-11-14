@@ -31,6 +31,13 @@ let days = [
 document.getElementById("date").innerHTML = `🗓 ${months[m]} ${d}, ${y} `;
 document.querySelector(".day").innerHTML = `${days[wd]}`;
 document.getElementById("time").innerHTML = ` ${currentTime}`;
+//weekdays
+document.querySelector(".day1").innerHTML = `${days[wd-6]}`;
+document.querySelector(".day2").innerHTML = `${days[wd-5]}`;
+document.querySelector(".day3").innerHTML = `${days[wd-4]}`;
+document.querySelector(".day4").innerHTML = `${days[wd-3]}`;
+document.querySelector(".day5").innerHTML = `${days[wd-2]}`;
+document.querySelector(".day6").innerHTML = `${days[wd-1]}`;
 //background changes according to the time of the day
 
 if (document.body) {
