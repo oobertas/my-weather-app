@@ -19,9 +19,11 @@
 }
 
 .search {
-  width: 100%;
+  width: 270px;
+  height: 40px;
   padding: 10px;
-  border-radius: 20px;
+  border-radius: 5px;
+  margin-right: 0;
 }
 
 .city {
@@ -41,6 +43,7 @@
   color: aliceblue;
   text-align: right;
   margin-top: 20px;
+  margin-left: 0;
   font-family: "Lobster", cursive;
   font-size: 20px;
   border-radius: 20px;
@@ -62,8 +65,16 @@
   font-size: 20px;
 }
 
+.temp-box{
+  margin: 0 auto;
+}
+
 .temp {
-  text-align: center;
+  color: aliceblue;
+  margin-right: 0;
+  margin-bottom: 5px;
+  margin-top: 35px;
+  text-align: right;
   font-family: "Lobster", cursive;
 }
 
@@ -72,8 +83,18 @@ li{
 }
 
 .degrees {
-  font-size: 20px;
+  margin-top: 0;
+  font-size: 15px;
   color: black;
+}
+
+.convert{
+  margin-right: 0;
+}
+
+.one{
+  display: inline;
+  font-size: 15px;
 }
 
 #celsius {
@@ -81,6 +102,10 @@ li{
 }
 .fa-sun {
   color: yellow;
+  padding: 0;
+  margin-left: 20px;
+  height: 64px;
+  width: 64px;
 }
 
 .otherDays {
@@ -103,4 +128,13 @@ li{
 
 .bottom-link {
   color: yellow;
+}
+
+.btn-warning{
+  margin-right: 0;
+  width: 110px;
+}
+
+#current{
+  margin-left: 0;
 }

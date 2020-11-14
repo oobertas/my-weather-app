@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="src/styles.css" />
+    
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -20,7 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lobster&display=swap"
       rel="stylesheet"
     />
-   
+   <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <div class = "box">
@@ -53,26 +53,33 @@
       </form>
       <div class="row">
         <h1 id="city" class="col-5 city"></h1>
-        <div class="calendar">
+       
+        <div class="temp-box">
+          <h2 class="temp" >
+            <div class="clearfix">
+            <i class="fas fa-sun icon-large" class="float-left"></i>
+            <div id="temp" class="float-right"></div>    
+            <div class="convert">   
+            <a href="#" class="degrees" id="celsius">°C</a><div class="one">|</div><a
+              href="#"
+              class="degrees"
+              id="fahrenheit"
+              >°F</a
+            ></div>
+          </div>
+          </h2>
+      </div>
+    </div>
+        <div class = "col-4" class="calendar">
           <h4 id="date">
             <h4 class="day">🗓</h4>
           </h4>
         </div>
-      </div>
+      
       <li id="description" class="weather">
 			</li>
 
-        <h2 class="temp" class="col-6">
-          <i class="fas fa-sun icon-large"></i>
-          <div id="temp"> <br /></div>
-          <a href="#" class="degrees" id="celsius">°C</a>|<a
-            href="#"
-            class="degrees"
-            id="fahrenheit"
-            >°F</a
-          >
-        </h2>
-      </li>
+     
       <ul>
       <li class="weather">
 				Humidity: 
