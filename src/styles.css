@@ -1,6 +1,5 @@
 .container {
   border-radius: 20px;
-  
   box-shadow: 5px 1px 100px 5px #d3d3d3;
 }
 
@@ -19,7 +18,7 @@
 }
 
 .search {
-  width: 270px;
+  width: 260px;
   height: 40px;
   padding: 10px;
   border-radius: 5px;
@@ -57,7 +56,7 @@
   color: aliceblue;
   text-align: right;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   border-radius: 20px;
 }
 .date{
@@ -96,6 +95,7 @@ li{
 }
 
 .degrees {
+  
   margin-top: 0;
   font-size: 15px;
   color: black;
@@ -103,6 +103,15 @@ li{
 
 .convert{
   margin-right: 0;
+  margin-left: 0;
+  color: aliceblue;
+  margin-top: 0;
+  text-align: center;
+  font-size: 15px;
+  color: black;
+  padding: 20px;
+  border-radius: 100px;
+  box-shadow: 5px 1px 100px 30px #d3d3d3;
 }
 
 .one{
@@ -113,6 +122,7 @@ li{
 #celsius {
   color: blue;
 }
+
 .fa-sun {
   color: yellow;
   padding: 0;
@@ -121,18 +131,21 @@ li{
   width: 64px;
 }
 
-.otherDays {
+.week { 
   font-family: "Josefin Sans", sans-serif;
-}
-
-.week {
-  text-align: center;
-  font-family: "Josefin Sans", sans-serif;
-  color: black;
+  color: yellow;
+  font-weight: bold;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 5px 1px 10px 5px #d3d3d3;
 }
+
+.day{
+  font-family: "Josefin Sans", sans-serif;
+  color: aliceblue;
+  font-size: 20px;
+}
+
 .column-left{ float: left; width: 33.333%; }
 .column-right{ float: right; width: 33.333%; }
 .column-center{ display: inline-block; width: 33.333%; }
