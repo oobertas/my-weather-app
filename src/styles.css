@@ -125,14 +125,18 @@ li{
 
 .week { 
   font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
   color: yellow;
+  line-height: 90px;
   font-weight: bold;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 5px 1px 10px 5px #d3d3d3;
 }
 
-
+.week_days{
+  color: aliceblue;
+}
 
 .column-left{ float: left; width: 33.333%; }
 .column-right{ float: right; width: 33.333%; }
