@@ -118,9 +118,9 @@ li{
 .fa-sun {
   color: yellow;
   padding: 0;
-  margin-left: 20px;
-  height: 64px;
-  width: 64px;
+  margin-right: 20px;
+  line-height: 64px;
+  
 }
 
 .week { 

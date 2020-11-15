@@ -1,10 +1,20 @@
 
 let n = new Date();
 let y = n.getFullYear();
-let m = n.getMonth() + 1;
+let m = n.getMonth();
 let d = n.getDate();
 let wd = n.getDay();
-let currentTime = `${n.getHours()}:${n.getMinutes()}`;
+
+function addZero(timeUnit){
+  let final = timeUnit;
+  if(final<10){
+    final=`0${timeUnit}`;
+  }
+  return final;
+}
+let currentTime = `${addZero(n.getHours())}:${addZero(n.getMinutes())}`;
+
+
 let months = [
   "January",
   "February",
@@ -28,20 +38,21 @@ let days = [
   "Friday",
   "Saturday",
 ];
-document.getElementById("date").innerHTML = `🗓 ${months[m]} ${d}, ${y} `;
+
+document.getElementById("date").innerHTML = `🗓 ${months[m]} ${d},${y}`;
 document.querySelector(".day").innerHTML = `${days[wd]}`;
 document.getElementById("time").innerHTML = ` ${currentTime}`;
 //weekdays
-document.querySelector(".day1").innerHTML = `${days[wd-6]}`;
-document.querySelector(".day2").innerHTML = `${days[wd-5]}`;
-document.querySelector(".day3").innerHTML = `${days[wd-4]}`;
-document.querySelector(".day4").innerHTML = `${days[wd-3]}`;
-document.querySelector(".day5").innerHTML = `${days[wd-2]}`;
-document.querySelector(".day6").innerHTML = `${days[wd-1]}`;
+document.querySelector(".day1").innerHTML = `${days[wd+1]}`;
+document.querySelector(".day2").innerHTML = `${days[wd+2]}`;
+document.querySelector(".day3").innerHTML = `${days[wd+3]}`;
+document.querySelector(".day4").innerHTML = `${days[wd+4]}`;
+document.querySelector(".day5").innerHTML = `${days[wd+5]}`;
+document.querySelector(".day6").innerHTML = `${days[wd+6]}`;
 //background changes according to the time of the day
 
 if (document.body) {
-  if (7 <= currentTime && currentTime < 20) {
+  if (7 <= n.getHours() && n.getHours() < 20) {
     document.body.background =
       "https://images.unsplash.com/photo-1570378114504-ce4aedae3ddd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80";
   } else {
