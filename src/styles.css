@@ -132,11 +132,7 @@ li{
   box-shadow: 5px 1px 10px 5px #d3d3d3;
 }
 
-.day{
-  font-family: "Josefin Sans", sans-serif;
-  color: aliceblue;
-  font-size: 20px;
-}
+
 
 .column-left{ float: left; width: 33.333%; }
 .column-right{ float: right; width: 33.333%; }
@@ -157,4 +153,14 @@ li{
 
 #current{
   margin-left: 0;
+}
+
+#icon-main{
+  max-width: 120px;
+  line-height: 120px;
+ 
+}
+
+#icon-small{
+  max-width: 80px;
 }
