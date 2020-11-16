@@ -70,9 +70,7 @@ function displayWeather(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].description;
-  document.querySelector("#icon-main").src=`media/${response.data.weather[0].description}.png`;
+  document.querySelector("#icon-main").src=`media/${response.data.weather[0].main}.png`;
   console.log(response);
 }
 
