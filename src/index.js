@@ -71,7 +71,9 @@ function displayWeather(response) {
     response.data.wind.speed
   );
   document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
+  document.querySelector("#icon-main").src=`media/${response.data.weather[0].description}.png`;
+  console.log(response);
 }
 
 function citySearch(city) {
@@ -96,6 +98,8 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
+
+
 
 let searchForm = document.querySelector("#searchForm");
 searchForm.addEventListener("submit", replaceCity);
