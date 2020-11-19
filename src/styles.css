@@ -94,7 +94,6 @@ li{
   
   margin-top: 0;
   font-size: 15px;
-  color: black;
 }
 
 .convert{
@@ -109,10 +108,6 @@ li{
 .one{
   display: inline;
   font-size: 15px;
-}
-
-#celsius {
-  color: blue;
 }
 
 .fa-sun {
@@ -167,4 +162,14 @@ li{
 
 #icon-small{
   max-width: 80px;
+}
+
+.active{
+  color: aliceblue;
+  cursor: default;
+}
+
+.active:hover{
+  color: aliceblue;
+  text-decoration: none;
 }

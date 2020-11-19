@@ -71,7 +71,10 @@ function displayWeather(response) {
     response.data.wind.speed
   );
   document.querySelector("#icon-main").src=`media/${response.data.weather[0].main}.png`;
-  console.log(response);
+
+    celsiusTemp=response.data.main.temp;
+    
+  
 }
 
 function citySearch(city) {
@@ -97,6 +100,26 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+function convertToFahrenheit(event){
+  event.preventDefault();
+  let tempElement=document.getElementById("temp");
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
+  let farengheitTemp = (celsiusTemp*9)/5+32;
+  tempElement.innerHTML=Math.round(farengheitTemp);
+  
+}
+
+function convertToCelsius(event){
+  event.preventDefault();
+  fahrenheit.classList.remove("active");
+  celsius.classList.add("active");
+  let tempElement=document.getElementById("temp");
+  tempElement.innerHTML=Math.round(celsiusTemp);
+  
+}
+
+let celsiusTemp = null;
 
 
 let searchForm = document.querySelector("#searchForm");
@@ -106,3 +129,9 @@ let currentLocationButton = document.querySelector("#current");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 citySearch("New York");
+
+let fahrenheit = document.getElementById("fahrenheit");
+fahrenheit.addEventListener("click", convertToFahrenheit);
+
+let celsius = document.getElementById("celsius");
+celsius.addEventListener("click", convertToCelsius);
