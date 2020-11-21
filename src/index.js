@@ -58,18 +58,11 @@ if (document.body) {
 
 function displayWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temp").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector("#temp").innerHTML = Math.round(response.data.main.temp);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
+  document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
   document.querySelector("#icon-main").src=`media/${response.data.weather[0].main}.png`;
-
-    celsiusTemp=response.data.main.temp;
-    
-  
+  celsiusTemp=response.data.main.temp;
 }
 
 function forecastWeather(array,day){
@@ -82,8 +75,8 @@ function forecastWeather(array,day){
    if(array[i].dt_txt === `${nextdate} 15:00:00`){
      document.querySelector(`.temp${day}`).innerHTML = `${Math.round(array[i].main.temp)}°C`;
      document.querySelector(`.img${day}`).src=`media/${array[i].weather[0].main}.png`;
+     celsiusTempAll[day]=array[i].main.temp;
    }
-
   }
 }
 
@@ -109,6 +102,7 @@ function replaceCity(event) {
   let city = document.querySelector("#search").value;
   citySearch(city);
 }
+
 function searchLocation(position) {
   let apiKey = "554c41227aff1009c4a80ad1aa690508";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
@@ -129,6 +123,11 @@ function convertToFahrenheit(event){
   let farengheitTemp = (celsiusTemp*9)/5+32;
   tempElement.innerHTML=Math.round(farengheitTemp);
   
+  for(let i=1;i<=5;i++){
+  let tempElementByDay=document.querySelector(`.temp${i}`);
+  let newFarengheitTemp = (celsiusTempAll[i]*9)/5+32;
+  tempElementByDay.innerHTML=`${Math.round(newFarengheitTemp)}°F`;
+  }
 }
 
 function convertToCelsius(event){
@@ -138,10 +137,14 @@ function convertToCelsius(event){
   let tempElement=document.getElementById("temp");
   tempElement.innerHTML=Math.round(celsiusTemp);
   
+  for(let i=1;i<=5;i++){
+    let tempElementByDay=document.querySelector(`.temp${i}`);
+    tempElementByDay.innerHTML=`${Math.round(celsiusTempAll[i])}°C`;
+  }
 }
 
 let celsiusTemp = null;
-
+let celsiusTempAll = [];
 
 let searchForm = document.querySelector("#searchForm");
 searchForm.addEventListener("submit", replaceCity);

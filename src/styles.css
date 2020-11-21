@@ -73,16 +73,14 @@ li{
 }
 
 .degrees {
-  
   margin-top: 0;
   font-size: 15px;
 }
 
 .convert{
-  margin-right: 0;
-  margin-left: 0;
+  position: absolute;
+  right: -20px;
   color: aliceblue;
-  margin-top: 0;
   text-align: right;
   font-size: 15px;
 }
