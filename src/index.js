@@ -72,7 +72,7 @@ function forecastWeather(array,day){
     let nextdate = `${nextday.getFullYear()}-${nextday.getMonth() + 1}-${nextday.getDate()}`;
     
   for(let i=0;i<array.length;i++){
-   if(array[i].dt_txt === `${nextdate} 15:00:00`){
+   if(array[i].dt_txt === `${nextdate} 00:00:00`){
      document.querySelector(`.temp${day}`).innerHTML = `${Math.round(array[i].main.temp)}°C`;
      document.querySelector(`.img${day}`).src=`media/${array[i].weather[0].main}.png`;
      celsiusTempAll[day]=array[i].main.temp;
@@ -136,7 +136,7 @@ function convertToCelsius(event){
   celsius.classList.add("active");
   let tempElement=document.getElementById("temp");
   tempElement.innerHTML=Math.round(celsiusTemp);
-  
+
   for(let i=1;i<=5;i++){
     let tempElementByDay=document.querySelector(`.temp${i}`);
     tempElementByDay.innerHTML=`${Math.round(celsiusTempAll[i])}°C`;
