@@ -14,7 +14,7 @@ li{
 }
 
 .header {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Big Shoulders Inline Text', cursive;
   text-align: center;
   color: aliceblue;
   padding: 15px;
@@ -33,7 +33,7 @@ li{
   color: aliceblue;
   text-align: center;
   margin-top: 20px;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Big Shoulders Inline Text', cursive;
   font-size: 50px;
   border-radius: 20px;
 }
@@ -47,7 +47,7 @@ li{
   text-align: right;
   margin-top: 20px;
   margin-left: 0;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Big Shoulders Inline Text', cursive;
   font-size: 15px;
   border-radius: 20px;
 }
@@ -69,7 +69,7 @@ li{
   margin-bottom: 5px;
   margin-top: 35px;
   text-align: right;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Big Shoulders Inline Text', cursive;
 }
 
 .degrees {
