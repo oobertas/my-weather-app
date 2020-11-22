@@ -72,7 +72,7 @@ function forecastWeather(array,day){
     let nextdate = `${nextday.getFullYear()}-${nextday.getMonth() + 1}-${nextday.getDate()}`;
     
   for(let i=0;i<array.length;i++){
-   if(array[i].dt_txt === `${nextdate} 00:00:00`){
+   if(array[i].dt_txt === `${nextdate} 03:00:00`){
      document.querySelector(`.temp${day}`).innerHTML = `${Math.round(array[i].main.temp)}°C`;
      document.querySelector(`.img${day}`).src=`media/${array[i].weather[0].main}.png`;
      celsiusTempAll[day]=array[i].main.temp;
@@ -86,6 +86,7 @@ function displayForecast(response){
   forecastWeather(response.data.list,3);
   forecastWeather(response.data.list,4);
   forecastWeather(response.data.list,5);
+  console.log(response.data);
 }
 
 function citySearch(city) {
