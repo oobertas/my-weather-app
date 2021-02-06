@@ -22,7 +22,8 @@ li{
 }
 
 .search {
-  width: 260px;
+  display: block;
+  width: 120%;
   height: 40px;
   padding: 10px;
   border-radius: 5px;
@@ -158,8 +159,21 @@ li{
   font-size: 100px;
 }
 
+#search_button{
+  background-color:yellowgreen;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  border: none;
+  
+}
+
 #current{
-  margin-left: 0;
+  background-color:yellow;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  border: none;
 }
 
 #icon-main{
