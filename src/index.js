@@ -66,11 +66,19 @@ function displayWeather(response) {
 }
 
 function forecastWeather(array,day){
-    let nextday = new Date();
-    nextday.setDate(nextday.getDate() + day);
-    document.querySelector(`.day${day}`).innerHTML = `${days[nextday.getDay()]}`;
-    let nextdate = `${nextday.getFullYear()}-${nextday.getMonth() + 1}-${nextday.getDate()}`;
-    
+  let nextday = new Date();
+  nextday.setDate(nextday.getDate() + day);
+  document.querySelector(`.day${day}`).innerHTML = `${days[nextday.getDay()]}`;
+  let month = nextday.getMonth() + 1;
+  let dayOfTheMonth = nextday.getDate();
+  if(month<10){
+    month = `0${month}`;
+  }
+  if(dayOfTheMonth<10){
+    dayOfTheMonth = `0${dayOfTheMonth}`;
+  }
+  let nextdate = `${nextday.getFullYear()}-${month}-${dayOfTheMonth}`;
+
   for(let i=0;i<array.length;i++){
    if(array[i].dt_txt === `${nextdate} 03:00:00`){
      document.querySelector(`.temp${day}`).innerHTML = `${Math.round(array[i].main.temp)}°C`;
@@ -86,6 +94,7 @@ function displayForecast(response){
   forecastWeather(response.data.list,3);
   forecastWeather(response.data.list,4);
   forecastWeather(response.data.list,5);
+  console.log(response.data.list);
 }
 
 function citySearch(city) {
