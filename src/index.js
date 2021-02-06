@@ -94,7 +94,6 @@ function displayForecast(response){
   forecastWeather(response.data.list,3);
   forecastWeather(response.data.list,4);
   forecastWeather(response.data.list,5);
-  console.log(response.data.list);
 }
 
 function citySearch(city) {
